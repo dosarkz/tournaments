@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  status_id: 1
+  start_at: 2017-09-18 11:30:23
+
+two:
+  name: MyText
+  status_id: 1
+  start_at: 2017-09-18 11:30:23
