@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+TournamentType.create([{name: 'Теннис', alias: 'tennis'}, {name: 'Фифа', alias: 'fifa'}])
