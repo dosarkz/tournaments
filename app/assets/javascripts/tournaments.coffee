@@ -2,13 +2,19 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
-  $("#member_add_btn").on "click", ->
+  $("#new_member_btn").on "click", ->
     console.log("button clicked!");
-    $("#tournament_member_block").append(' <div class="mdl-textfield mdl-js-textfield" id="tournament_member_block">
-            <input type="text" id="tournament_member" name="tournament[member][]" placeholder="Введите имя участника"
+    $("#members").append('<div class="row">
+            <input type="text" id="tournament_member_1" name="tournament[member][]" placeholder="Введите имя участника"
                    class="mdl-textfield__input form-control">
-            <label for="member" class="mdl-textfield__label">Участники</label>
+                   <a class="btn-floating btn-small waves-effect waves-light red" id="remove_member_btn">
+              <i class="material-icons">delete</i></a>
           </div>');
+  $('select').material_select();
+
+$(document).on "click", "#remove_member_btn", ->
+  this.parentNode.remove();
+
 
 
 

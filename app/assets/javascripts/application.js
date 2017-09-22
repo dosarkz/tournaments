@@ -12,12 +12,13 @@
 //
 //= require rails-ujs
 //= require jquery
-//= require turbolinks
-//= require material
+//= #require turbolinks
+//= require materialize
 //= require_tree .
 
-document.addEventListener('turbolinks:load', function() {
-    componentHandler.upgradeDom();
-});
+// document.addEventListener('turbolinks:load', function() {
+//     componentHandler.upgradeDom();
+// });
+
 
 
