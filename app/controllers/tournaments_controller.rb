@@ -15,6 +15,7 @@ class TournamentsController < ApplicationController
   # GET /tournaments/new
   def new
     @tournament = Tournament.new
+    @members = Member.new
   end
 
   # GET /tournaments/1/edit
@@ -25,6 +26,8 @@ class TournamentsController < ApplicationController
   # POST /tournaments.json
   def create
     @tournament = Tournament.new(tournament_params)
+
+    #params[:tournament][:member]
 
     respond_to do |format|
       if @tournament.save
@@ -69,6 +72,6 @@ class TournamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournament_params
-      params.require(:tournament).permit(:name, :status_id, :start_at, :tournament_type_id)
+      params.require(:tournament).permit(:name, :status_id, :start_at, :tournament_type_id, members_attributes: [:name])
     end
 end
