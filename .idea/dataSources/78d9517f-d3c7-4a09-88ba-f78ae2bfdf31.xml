@@ -126,21 +126,25 @@
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <column id="36" parent="8" name="start_at">
+    <column id="36" parent="8" name="tournament_type_id">
       <Position>3</Position>
-      <DataType>DATETIME(0,-1)|12</DataType>
+      <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <column id="37" parent="8" name="created_at">
+    <column id="37" parent="8" name="start_at">
       <Position>4</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="8" name="updated_at">
+    <column id="38" parent="8" name="created_at">
       <Position>5</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="39" parent="8">
+    <column id="39" parent="8" name="updated_at">
+      <Position>6</Position>
+      <DataType>DATETIME(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

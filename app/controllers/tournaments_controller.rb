@@ -31,6 +31,8 @@ class TournamentsController < ApplicationController
 
     respond_to do |format|
       if @tournament.save
+        @tournament.members.build
+
         format.html { redirect_to @tournament, notice: 'Tournament was successfully created.' }
         format.json { render :show, status: :created, location: @tournament }
       else
@@ -72,6 +74,6 @@ class TournamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournament_params
-      params.require(:tournament).permit(:name, :status_id, :start_at, :tournament_type_id, members_attributes: [:name])
+      params.require(:tournament).permit(:name, :status_id, :start_at, :tournament_type_id, members_attributes: [:id, :name])
     end
 end

@@ -4,7 +4,5 @@ class Tournament < ApplicationRecord
 
   validates :tournament_type_id, presence: true
   validates :name, presence: true
-  accepts_nested_attributes_for :members, :allow_destroy => true
-  validates :members, :presence => true
-
+  accepts_nested_attributes_for :members
 end
