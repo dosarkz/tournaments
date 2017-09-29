@@ -33,6 +33,14 @@ class TournamentsController < ApplicationController
       if @tournament.save
         @tournament.members.build
 
+        tours_count = Math.log2(@tournament.members.count).floor
+
+        tours_count.each do |tour|
+          
+        end
+
+        byebug
+
         format.html { redirect_to @tournament, notice: 'Tournament was successfully created.' }
         format.json { render :show, status: :created, location: @tournament }
       else
