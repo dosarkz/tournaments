@@ -33,10 +33,11 @@ class TournamentsController < ApplicationController
       if @tournament.save
         @tournament.members.build
 
+        # calculation count rounds
         tours_count = Math.log2(@tournament.members.count).floor
 
         tours_count.each do |tour|
-          
+
         end
 
         byebug

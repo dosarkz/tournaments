@@ -35,18 +35,17 @@
       <% i = 0%>
      <div class="row">
         <div id="members">
-
-          <div class="row">
-
             <%= form.fields_for :members, @members do |member_fields| %>
+              <div class="row member_item">
                 <div class="field">
                   <%= member_fields.label :name %>
                   <%= member_fields.text_field :name, id: :member_name, placeholder: "Введите имя участника",
                                                class: "textfield__input form-control" %>
                 </div>
+              </div>
                 <% i += 1%>
             <% end %>
-          </div>
+
         </div>
 
        <a data-counter="<%= i%>" class="btn-floating btn-large waves-effect waves-light red" id="new_member_btn"><i class="material-icons">add</i></a>
@@ -54,7 +53,7 @@
        <!--<p>Количество раундов: <span>3</span></p>-->
 
        <!--<p><a href="">Добавить 8 участников</a></p>-->
-       <p><a href="">Сортировать участников</a></p>
+       <p><a href="#members" id="sortMembers">Сортировать участников</a></p>
      </div>
 
       <div class="row">
